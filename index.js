@@ -15,12 +15,12 @@ bot.on("guildMemberAdd", function(member) {
 bot.on("ready", function() {
     bot.user.setActivity('Made by Minty');
     console.log("Im Ready!");
-    global = bot.channels.find("name", "welcome").fetchMessage("499969753205440513");
+    global = bot.channels.find("name", "witaj").fetchMessage("499969753205440513");
 });
     
 bot.on('messageReactionAdd', function(reaction, users) {
     console.log("kebab")
-    var Welcome = bot.channels.find("name", "welcome");
+    var witaj = bot.channels.find("name", "witaj");
     var messageid = global;
     var Emoji = bot.emojis.find("name","artifact");
     var rolenews = reaction.message.guild.roles.find("name", "Niepotwierdzony");
@@ -31,7 +31,7 @@ bot.on('messageReactionAdd', function(reaction, users) {
 
 bot.on('messageReactionRemove', function(reaction, users) {
     console.log("no kebab")
-    var Welcome = bot.channels.find("name", "welcome");
+    var witaj = bot.channels.find("name", "witaj");
     var messageid = global;
     var Emoji = bot.emojis.find("name","artifact");
     var rolenews = reaction.message.guild.roles.find("name", "Niepotwierdzony");
